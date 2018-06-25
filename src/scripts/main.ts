@@ -1,3 +1,4 @@
+
 import 'core-js/shim';
 import { run } from '@cycle/rxjs-run';
 import { VNode, makeDOMDriver, h1 } from '@cycle/dom';
@@ -5,23 +6,21 @@ import { Observable as o } from 'rxjs';
 import { DOMSource } from '@cycle/dom/rxjs-typings';
 
 type So = {
-  DOM: DOMSource
+    DOM: DOMSource
 };
 
 type Si = {
-  DOM: o<VNode>
+    DOM: o<VNode>
 };
 
-function main({ DOM }: So): Si {
-  const dom$ = o.of(h1(['It works!']));
+function main({ }: So): Si {
+    const dom$ = o.of(h1(['It works!']));
 
-  return {
-    DOM: dom$
-  };
+    return {
+        DOM: dom$
+    };
 }
 
 run(main, {
-  DOM: makeDOMDriver('#app')
+    DOM: makeDOMDriver('#app')
 });
-
-
