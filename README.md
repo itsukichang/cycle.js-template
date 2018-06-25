@@ -1,15 +1,24 @@
 
-# 使いかた
+# How to use
 ```
-npm install
-npm run watch
+yarn install
+yarn start
 ```
 
-# 入ってるもの
+# Frameworks
 - pug
 - stylus
 - typescript
-- browser-sync
+- ramda.js
 - cycle.js
 - rxjs
 - xstream
+- webpack
+
+# Using as template
+```
+git clone {this}
+git remote -v
+git remote set-url origin {new url}
+```
+- edit README / package.json
